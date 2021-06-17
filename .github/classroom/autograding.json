@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "checkNodes (1 Punkt)",
+      "setup": "make exercise7",
+      "run": "./exercise7 Test1",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "checkEndTimes (2 Punkte)",
+      "setup": "make exercise7",
+      "run": "./exercise7 Test2",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    },
+    {
+      "name": "checkList (1 Punkt)",
+      "setup": "make exercise7",
+      "run": "./exercise7 Test3",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "checkListNodeCount (1 Punkt)",
+      "setup": "make exercise7",
+      "run": "./exercise7 Test4",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "checkIfTreeAppIsLast (2 Punkte)",
+      "setup": "make exercise7",
+      "run": "./exercise7 Test5",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    },
+    {
+      "name": "checkOrder (3 Punkte)",
+      "setup": "make exercise7",
+      "run": "./exercise7 Test6",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 3
+    }
+  ]
+}
