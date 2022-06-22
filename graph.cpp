@@ -114,9 +114,37 @@ graph *readGraphFromFile(const char *filename){
 
 list *topologySearch(graph *g) {
     // TODO: implement
-    return NULL;
+
+
+    time = 0;
+    resetGraph(g);
+    list* lst = l_init();
+
+    for (int i = 0; i < g->numNodes; i++) {
+        if (g->nodes[i].color == WHITE) {
+            g->nodes[i].startTime = time;
+            dfs_visit(g, i, lst);
+        }
+    }
+
+    return lst;
 }
 
 void dfs_visit(graph *g, int node, list *l) {
     // TODO: implement the recursive function here
+    time++;
+    g->nodes[node].color = GRAY;
+    g->nodes[node].startTime = time;
+
+    for (int i = 0; i < g->numNodes; i++) {
+        if (g->adjMatrix[i][node] == 1 && g->nodes[i].color == WHITE) {
+            dfs_visit(g, i, l);
+        }
+    }
+
+    time++;
+    g->nodes[node].endTime = time;
+    g->nodes[node].color = BLACK;
+
+    l_insert(l, &g->nodes[node]);
 }
